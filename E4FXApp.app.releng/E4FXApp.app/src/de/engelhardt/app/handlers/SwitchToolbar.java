@@ -1,0 +1,29 @@
+ 
+package de.engelhardt.app.handlers;
+
+import javax.inject.Named;
+
+import org.eclipse.e4.core.di.annotations.Execute;
+import org.eclipse.e4.ui.model.application.MApplication;
+import org.eclipse.e4.ui.model.application.ui.basic.MTrimBar;
+import org.eclipse.e4.ui.workbench.modeling.EModelService;
+import org.eclipse.e4.ui.workbench.modeling.EPartService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class SwitchToolbar {
+	static final Logger logger = LoggerFactory.getLogger(SwitchToolbar.class);
+
+	@Execute
+	public void execute(@Named("e4fxapp.app.commandparameter.toolbar") String parameter, MApplication app, EPartService partService, 
+		      EModelService modelService) {
+		logger.info(parameter);
+		MTrimBar  trimBar = (MTrimBar ) modelService.find(parameter, app);
+		// now switch Toolbar
+		 if (trimBar != null) {
+		        trimBar.setVisible(!trimBar.isVisible());
+		 }
+	
+	}
+		
+}

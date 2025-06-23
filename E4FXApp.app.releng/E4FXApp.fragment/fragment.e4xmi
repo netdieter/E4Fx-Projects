@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_HoiEwEPPEfCzcrx1t5ZwVQ">
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_HoiEwUPPEfCzcrx1t5ZwVQ" featurename="children" parentElementId="e4fxapp.app.trimbar.left">
+    <elements xsi:type="menu:ToolBar" xmi:id="_HoiEwkPPEfCzcrx1t5ZwVQ" elementId="e4fxapp.app.toolbar.left">
+      <children xsi:type="menu:DirectToolItem" xmi:id="_HoiEw0PPEfCzcrx1t5ZwVQ" elementId="e4fxapp.app.directtoolitem.dti" label="DTI"/>
+      <children xsi:type="menu:ToolBarSeparator" xmi:id="_HoiExEPPEfCzcrx1t5ZwVQ" elementId="e4fxapp.app.toolbarseparator.0"/>
+      <children xsi:type="menu:HandledToolItem" xmi:id="_HoiExUPPEfCzcrx1t5ZwVQ" elementId="e4fxapp.app.handledtoolitem.hdi" label="HDI"/>
+      <children xsi:type="menu:ToolBarSeparator" xmi:id="_MLNlwEPPEfCzcrx1t5ZwVQ" elementId="e4fxapp.fragment.toolbarseparator.0"/>
+      <children xsi:type="menu:HandledToolItem" xmi:id="_NRHd4EPPEfCzcrx1t5ZwVQ" elementId="e4fxapp.fragment.handledtoolitem.fra" label="Fra"/>
+    </elements>
+  </fragments>
+</fragment:ModelFragments>

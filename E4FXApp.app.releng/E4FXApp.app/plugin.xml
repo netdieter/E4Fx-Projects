@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+<extension id="product" point="org.eclipse.core.runtime.products">
+	<product name="E4 FX Application" application="org.eclipse.fx.ui.workbench.fx.application" >
+		<property name="appName" value="E4 FX Application" />
+		<property name="applicationXMI" value="E4FXApp.app/Application.e4xmi" />
+		<property name="cssTheme" value="theme.default" />
+		<property name="lifeCycleURI" value="bundleclass://E4FXApp.app/de.engelhardt.app.LifeCycleManager"/>		
+	</product>
+	
+</extension>
+<extension
+      id="id2"
+      point="org.eclipse.e4.workbench.model">
+</extension>
+</plugin>

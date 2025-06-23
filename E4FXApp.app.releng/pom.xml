@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<name>E4 FX Application - releng</name>
+
+	<groupId>E4FXApp</groupId>
+	<artifactId>E4FXApp.app.releng</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<tycho-version>4.0.13</tycho-version>
+		<junit-version>4.11</junit-version>
+		<mockito-version>1.8.4</mockito-version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.target>21</maven.compiler.target>
+		<maven.compiler.source>21</maven.compiler.source>
+		<downloadSources>true</downloadSources>
+		<downloadJavadocs>true</downloadJavadocs>
+	</properties>
+
+	<modules>
+		<module>./E4FXApp.app</module>
+		<module>./E4FXApp.app.feature</module>
+		<module>./E4FXApp.app.product</module>
+		<!--		
+		<module>../E4FXApp.fragment</module>
+-->
+		
+		<module>./slf4j-logging-plugin</module>
+		<module>E4FXApp.libs</module>
+	</modules>
+
+	<repositories>
+		<repository>
+			<id>efxclipse-repo</id>
+			<layout>p2</layout>
+			<url>https://download.eclipse.org/efxclipse/runtime-released/3.9.0/site/</url>
+		</repository>
+	</repositories>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-maven-plugin</artifactId>
+					<version>${tycho-version}</version>
+					<extensions>true</extensions>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-compiler-plugin</artifactId>
+					<version>${tycho-version}</version>
+					<configuration>
+						<extraClasspathElements>
+							<!-- Include JavaFX modules as dependencies -->
+							<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-base -->
+							<dependency>
+								<groupId>org.openjfx</groupId>
+								<artifactId>javafx-base</artifactId>
+								<version>21.0.7</version>
+							</dependency>
+							<!-- https://mvnrepository.com/artifact/org.openjfx/javafx-base -->
+							<dependency>
+								<groupId>org.openjfx</groupId>
+								<artifactId>javafx-controls</artifactId>
+								<version>21.0.7</version>
+							</dependency><!-- https://mvnrepository.com/artifact/org.openjfx/javafx-base -->
+							<dependency>
+								<groupId>org.openjfx</groupId>
+								<artifactId>javafx-graphics</artifactId>
+								<version>21.0.7</version>
+							</dependency><!-- https://mvnrepository.com/artifact/org.openjfx/javafx-base -->
+							<dependency>
+								<groupId>org.openjfx</groupId>
+								<artifactId>javafx-fxml</artifactId>
+								<version>21.0.7</version>
+							</dependency><!-- https://mvnrepository.com/artifact/org.openjfx/javafx-base -->
+						</extraClasspathElements>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>target-platform-configuration</artifactId>
+					<version>${tycho-version}</version>
+					<configuration>
+						<pomDependencies>consider</pomDependencies>
+						<target>
+							<file>../E4FXApp.app.releng/common.target</file>
+						</target>
+						<environments>
+							<environment>
+								<os>win32</os>
+								<ws>win32</ws>
+								<arch>x86_64</arch>
+							</environment>
+						</environments>
+					</configuration>
+				</plugin>
+
+				<!-- https://mvnrepository.com/artifact/org.eclipse.tycho/tycho-p2-director-plugin -->
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-packaging-plugin</artifactId>
+					<version>${tycho-version}</version>
+					<executions>
+						<execution>
+							<configuration>
+								<finalName>${project.artifactId}_${unqualifiedVersion}</finalName>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-p2-repository-plugin</artifactId>
+					<version>${tycho-version}</version>
+					<configuration>
+						<skipArchive>true</skipArchive>
+						<includeAllDependencies>true</includeAllDependencies>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-p2-director-plugin</artifactId>
+					<version>${tycho-version}</version>
+			        <executions>
+			          <execution>
+							<!-- install the product for all configured os/ws/arch environments
+			              using p2 director -->
+			            <id>materialize-products</id>
+			            <goals>
+			              <goal>materialize-products</goal>
+			            </goals>
+			          </execution>
+						<execution>
+							<id>archive-products</id>
+							<goals>
+								<goal>archive-products</goal>
+							</goals>
+						</execution>
+			        </executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-compiler-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+			</plugin>
+			<!-- https://mvnrepository.com/artifact/org.eclipse.tycho/tycho-p2-director-plugin -->
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-packaging-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-p2-director-plugin</artifactId>
+			</plugin>
+		</plugins>
+
+	</build>
+</project>

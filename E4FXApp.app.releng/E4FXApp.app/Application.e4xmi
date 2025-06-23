@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_tpQGMYf7Ee-4IeEg-EfbsA" elementId="org.eclipse.e4.application" bindingContexts="_tpQGMIf7Ee-4IeEg-EfbsA">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_vlumQIr2Ee-KP5fV7bbbPg" elementId="e4fxapp.app.trimmedwindow.e4fxapplication" label="E4 FX Application" width="1000" height="600">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="__9lbENKrEe-6gdX5vIc4Ww" elementId="e4fxapp.app.perspectivestack.0">
+      <children xsi:type="advanced:Perspective" xmi:id="_Q7ixANKsEe-6gdX5vIc4Ww" elementId="e4fxapp.app.perspective.steuer" selectedElement="_Yy_1cNKsEe-6gdX5vIc4Ww" label="Steuer Perspektive">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_Yy_1cNKsEe-6gdX5vIc4Ww" elementId="e4fxapp.app.partsashcontainer.bank" containerData="1000" selectedElement="_lIyGYNKsEe-6gdX5vIc4Ww" horizontal="true">
+          <children xsi:type="basic:Part" xmi:id="_lIyGYNKsEe-6gdX5vIc4Ww" elementId="e4fxapp.app.part.kontoauszug" containerData="500" contributionURI="bundleclass://E4FXApp.app/de.engelhardt.app.parts.BankDaten" label="Bank"/>
+          <children xsi:type="basic:PartStack" xmi:id="_zncLMNaEEe-LrY0NYPJbrg" elementId="e4fxapp.app.partstack.filter" containerData="500">
+            <children xsi:type="basic:Part" xmi:id="_VA6X4NayEe-LrY0NYPJbrg" elementId="e4fxapp.app.part.einknfte" containerData="300" contributionURI="bundleclass://E4FXApp.app/de.engelhardt.app.parts.BankDatenEinnahmen" label="Einkünfte" iconURI="platform:/plugin/E4FXApp.app/css/CreateEOperation_eParameters_EParameter.gif"/>
+            <children xsi:type="basic:Part" xmi:id="_XqC9UNayEe-LrY0NYPJbrg" elementId="e4fxapp.app.part.ausgaben" containerData="300" contributionURI="bundleclass://E4FXApp.app/de.engelhardt.app.parts.BankDatenAusgaben" label="Ausgaben" iconURI="platform:/plugin/E4FXApp.app/css/CreateEModelElement_eAnnotations_EAnnotation.gif"/>
+          </children>
+        </children>
+      </children>
+      <children xsi:type="advanced:Perspective" xmi:id="_Ho6vENKsEe-6gdX5vIc4Ww" elementId="e4fxapp.app.perspective.stock" label="Bösen Perspektive">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_fFw4AJV3Ee--OI1uDoJa2Q" elementId="e4fxapp.app.partsashcontainer.0" containerData="1000" horizontal="true">
+          <children xsi:type="basic:Part" xmi:id="_pebuQJVyEe--OI1uDoJa2Q" elementId="e4fxapp.app.part.dataload" containerData="400" contributionURI="bundleclass://E4FXApp.app/de.engelhardt.app.parts.DataLoad" label="Data Load"/>
+          <children xsi:type="basic:Part" xmi:id="_IOTegIr3Ee-KP5fV7bbbPg" elementId="e4fxapp.app.part.breakevencalc" containerData="600" contributionURI="bundleclass://E4FXApp.app/de.engelhardt.app.parts.BreakEvenCalc" label="Breal Even Calc"/>
+        </children>
+      </children>
+      <children xsi:type="advanced:Perspective" xmi:id="_dX37kBcYEfCn0ZgKPscqRw" elementId="e4fxapp.app.perspective.pdfviewer" label="PDFViewer Perspektive">
+        <children xsi:type="basic:PartStack" xmi:id="_nPJisBcYEfCn0ZgKPscqRw" elementId="e4fxapp.app.partstack.pdfviewer">
+          <children xsi:type="basic:Part" xmi:id="_qiMAwBcYEfCn0ZgKPscqRw" elementId="e4fxapp.app.part.sandbox.part.pdfview" contributionURI="bundleclass://E4FXApp.app/de.engelhardt.app.parts.PdfView" label="PdfViewer Sandbox">
+            <menus xmi:id="_sCiUACqyEfCzctx_M1_5sg" elementId="e4fxapp.app.menu.pdffiles" label="PDFFiles">
+              <children xsi:type="menu:HandledMenuItem" xmi:id="_wAn6MCqyEfCzctx_M1_5sg" elementId="e4fxapp.app.handledmenuitem.openpdfdoc" label="Open Pdf Doc"/>
+            </menus>
+          </children>
+        </children>
+      </children>
+    </children>
+    <mainMenu xmi:id="_4OZFMIr2Ee-KP5fV7bbbPg" elementId="e4fxapp.app.menu.main">
+      <children xsi:type="menu:Menu" xmi:id="_7iD1YIr2Ee-KP5fV7bbbPg" elementId="e4fxapp.app.menu.file" label="File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_-2Z7AIr2Ee-KP5fV7bbbPg" elementId="e4fxapp.app.handledmenuitem.quit" label="Quit" command="_FncUgIr4Ee-KP5fV7bbbPg"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_U6Vu4JkyEe-hH4Rf1UXORg" elementId="e4fxapp.app.handledmenuitem.open" label="Open Data File" command="_sK0LwJkyEe-hH4Rf1UXORg"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_L_lW4NK4Ee-IYpDQpVQ2jw" elementId="e4fxapp.app.menu.perspektive" label="Anwendung">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_RjlyANK4Ee-IYpDQpVQ2jw" elementId="e4fxapp.app.handledmenuitem.steuer" label="Steuer" command="_X_dpQNK4Ee-IYpDQpVQ2jw">
+          <parameters xmi:id="_JOzb4NK5Ee-IYpDQpVQ2jw" elementId="e4fxapp.app.parameter.perspektive.steuer" name="e4fxapp.app.commandparameter.perspektive" value="e4fxapp.app.perspective.steuer"/>
+        </children>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_q6BOwNK4Ee-IYpDQpVQ2jw" elementId="e4fxapp.app.handledmenuitem.boerse" label="Börse" command="_X_dpQNK4Ee-IYpDQpVQ2jw">
+          <parameters xmi:id="_bOAMYNK5Ee-IYpDQpVQ2jw" elementId="e4fxapp.app.parameter.perspektive.boerse" name="e4fxapp.app.commandparameter.perspektive" value="e4fxapp.app.perspective.stock"/>
+        </children>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_oidl8Cn2EfCO8uQYG1T-wA" elementId="e4fxapp.app.handledmenuitem.pdfview" label="PdfViewer" command="_X_dpQNK4Ee-IYpDQpVQ2jw">
+          <parameters xmi:id="_iOhHICqwEfCzctx_M1_5sg" elementId="e4fxapp.app.parameter.2" name="e4fxapp.app.commandparameter.perspektive" value="e4fxapp.app.perspective.pdfviewer"/>
+        </children>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_3d_CYNN4Ee-c3rvDXWeQZw" elementId="e4fxapp.app.menu.steuer" label="Steuer">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_BeyY8NN5Ee-c3rvDXWeQZw" elementId="e4fxapp.app.handledmenuitem.import" label="Import" command="_GobMQNN5Ee-c3rvDXWeQZw"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_VtOPEEPxEfCzcrx1t5ZwVQ" elementId="e4fxapp.app.menu.ansicht" label="Ansicht">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_YRkbIEPxEfCzcrx1t5ZwVQ" elementId="e4fxapp.app.handledmenuitem.lefttoolbar" label="Left Toolbar" selected="true" type="Check" command="_dvbyAEPxEfCzcrx1t5ZwVQ">
+          <parameters xmi:id="_Z8fPYEPyEfCzcrx1t5ZwVQ" elementId="e4fxapp.app.parameter.lefttoolbar" name="e4fxapp.app.commandparameter.toolbar" value="e4fxapp.app.trimbar.left"/>
+        </children>
+      </children>
+    </mainMenu>
+    <trimBars xmi:id="_Cr0ZENZ0Ee-LrY0NYPJbrg" elementId="e4fxapp.app.trimbar.steuer">
+      <children xsi:type="menu:ToolBar" xmi:id="_FAPSwNZ0Ee-LrY0NYPJbrg" elementId="e4fxapp.app.toolbar.steuer">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_D7zucNqfEe-uYp_n8dCmNw" elementId="e4fxapp.app.handledtoolitem." label="Einkommensteuer" command="_QpKx4NqfEe-uYp_n8dCmNw">
+          <parameters xmi:id="_l3tzQNqfEe-uYp_n8dCmNw" elementId="e4fxapp.app.parameter.0" name="e4fxapp.app.commandparameter.tollbar.filter" value="EKST"/>
+        </children>
+        <children xsi:type="menu:ToolBarSeparator" xmi:id="_27OE4EMIEfCqnJ-9VBh0cg" elementId="e4fxapp.app.toolbarseparator.1"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_s2YOgNqfEe-uYp_n8dCmNw" elementId="e4fxapp.app.handledtoolitem.umsatzsteuer" label="Umsatzsteuer" command="_QpKx4NqfEe-uYp_n8dCmNw">
+          <parameters xmi:id="_v7u14NqfEe-uYp_n8dCmNw" elementId="e4fxapp.app.parameter.1" name="e4fxapp.app.commandparameter.tollbar.filter" value="UST"/>
+        </children>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_lyVNkD2zEfC1NdnrSf698A" elementId="e4fxapp.app.handledtoolitem.telefon" label="Telefon" command="_QpKx4NqfEe-uYp_n8dCmNw">
+          <parameters xmi:id="_T_Q_ID20EfC1NdnrSf698A" elementId="e4fxapp.app.parameter.3" name="e4fxapp.app.commandparameter.tollbar.filter" value="TELEFON"/>
+        </children>
+      </children>
+    </trimBars>
+    <trimBars xmi:id="_07k90EMHEfCqnJ-9VBh0cg" elementId="e4fxapp.app.trimbar.left" side="Left">
+      <children xsi:type="menu:ToolBar" xmi:id="_jTDEAEPPEfCzcrx1t5ZwVQ" elementId="e4fxapp.app.toolbar.left0">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_lTrfAEPPEfCzcrx1t5ZwVQ" elementId="e4fxapp.app.handledtoolitem.htdp" label="HTDP"/>
+        <children xsi:type="menu:ToolBarSeparator" xmi:id="_-g8YsEPPEfCzcrx1t5ZwVQ" elementId="e4fxapp.app.toolbarseparator.0"/>
+        <children xsi:type="menu:DirectToolItem" xmi:id="___WQYEPPEfCzcrx1t5ZwVQ" elementId="e4fxapp.app.directtoolitem.direct" label="Direct"/>
+      </children>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_JwAFUIr4Ee-KP5fV7bbbPg" elementId="e4fxapp.app.handler.quit" contributionURI="bundleclass://E4FXApp.app/de.engelhardt.app.handlers.QuitHandler" command="_FncUgIr4Ee-KP5fV7bbbPg"/>
+  <handlers xmi:id="_3v2VMJkyEe-hH4Rf1UXORg" elementId="e4fxapp.app.handler.opendata" contributionURI="bundleclass://E4FXApp.app/de.engelhardt.app.handlers.OpenDataHandler" command="_sK0LwJkyEe-hH4Rf1UXORg"/>
+  <handlers xmi:id="_1KuCgNK4Ee-IYpDQpVQ2jw" elementId="e4fxapp.app.handler.swich" contributionURI="bundleclass://E4FXApp.app/de.engelhardt.app.handlers.SwichPerspective" command="_X_dpQNK4Ee-IYpDQpVQ2jw"/>
+  <handlers xmi:id="_MXUBsNN5Ee-c3rvDXWeQZw" elementId="e4fxapp.app.handler.steuer.import" contributionURI="bundleclass://E4FXApp.app/de.engelhardt.app.handlers.BankAuszugImport" command="_GobMQNN5Ee-c3rvDXWeQZw"/>
+  <handlers xmi:id="_2gwCENqfEe-uYp_n8dCmNw" elementId="e4fxapp.app.handler.steuer.ausgaben.filter" contributionURI="bundleclass://E4FXApp.app/de.engelhardt.app.handlers.BankAusgabenFilter" command="_QpKx4NqfEe-uYp_n8dCmNw"/>
+  <handlers xmi:id="_1yBXgCn2EfCO8uQYG1T-wA" elementId="e4fxapp.app.handler.pdfview" contributionURI="bundleclass://E4FXApp.app/de.engelhardt.app.handlers.PdfView" command="_w7tI0Cn2EfCO8uQYG1T-wA"/>
+  <handlers xmi:id="_q40qIEPxEfCzcrx1t5ZwVQ" elementId="e4fxapp.app.handler.toolbarswitch" contributionURI="bundleclass://E4FXApp.app/de.engelhardt.app.handlers.SwitchToolbar" command="_dvbyAEPxEfCzcrx1t5ZwVQ"/>
+  <rootContext xmi:id="_tpQGMIf7Ee-4IeEg-EfbsA" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_tpQGMof7Ee-4IeEg-EfbsA" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_tpQGM4f7Ee-4IeEg-EfbsA" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_FncUgIr4Ee-KP5fV7bbbPg" elementId="e4fxapp.app.command.quit" commandName="Quit">
+    <parameters xmi:id="_IBVkEIr4Ee-KP5fV7bbbPg" elementId="e4fxapp.app.commandparameter.0" name="Command Parameter 0"/>
+  </commands>
+  <commands xmi:id="_sK0LwJkyEe-hH4Rf1UXORg" elementId="e4fxapp.app.command.opendata" commandName="OpenData"/>
+  <commands xmi:id="_X_dpQNK4Ee-IYpDQpVQ2jw" elementId="e4fxapp.app.perspective" commandName="Perspektive">
+    <parameters xmi:id="_ONN2oNK5Ee-IYpDQpVQ2jw" elementId="e4fxapp.app.commandparameter.perspektive" name="Command Parameter Perspektive"/>
+  </commands>
+  <commands xmi:id="_GobMQNN5Ee-c3rvDXWeQZw" elementId="e4fxapp.app.command.import" commandName="Steuer Import"/>
+  <commands xmi:id="_QpKx4NqfEe-uYp_n8dCmNw" elementId="e4fxapp.app.command.toolbar.filter" commandName="Command um Filter-Aktion auszulösen">
+    <parameters xmi:id="_gfpiYNqfEe-uYp_n8dCmNw" elementId="e4fxapp.app.commandparameter.tollbar.filter" name="Command Parameter Filter"/>
+  </commands>
+  <commands xmi:id="_w7tI0Cn2EfCO8uQYG1T-wA" elementId="e4fxapp.app.command.pdfview" commandName="PdfView">
+    <parameters xmi:id="_o6nf4Cn5EfCO8uQYG1T-wA" elementId="e4fxapp.app.commandparameter.pdfviewer" name="Command Parameter PdfViewer"/>
+  </commands>
+  <commands xmi:id="_dvbyAEPxEfCzcrx1t5ZwVQ" elementId="e4fxapp.app.command.enabletoobar" commandName="EnableToobar">
+    <parameters xmi:id="_hsmLIEPxEfCzcrx1t5ZwVQ" elementId="e4fxapp.app.commandparameter.toolbar" name="Command Parameter Toolbar"/>
+  </commands>
+  <addons xmi:id="_tpQGNIf7Ee-4IeEg-EfbsA" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_tpQGNYf7Ee-4IeEg-EfbsA" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_tpQGNof7Ee-4IeEg-EfbsA" elementId="org.eclipse.fx.ui.keybindings.e4.service" contributionURI="bundleclass://org.eclipse.fx.ui.keybindings.e4/org.eclipse.fx.ui.keybindings.e4.BindingServiceAddon"/>
+  <addons xmi:id="_tpQGN4f7Ee-4IeEg-EfbsA" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_tpQGOIf7Ee-4IeEg-EfbsA" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_tpQGOYf7Ee-4IeEg-EfbsA" elementId="org.eclipse.fx.ui.keybindings.e4.model" contributionURI="bundleclass://org.eclipse.fx.ui.keybindings.e4/org.eclipse.fx.ui.keybindings.e4.BindingProcessingAddon"/>
+  <addons xmi:id="_tpQGOof7Ee-4IeEg-EfbsA" elementId="org.eclipse.e4.ui.workbench.addons.HandlerProcessingAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+</application:Application>

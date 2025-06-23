@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Fragment
+Bundle-SymbolicName: E4FXApp.fragment;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Import-Package: javax.inject;version="[1.0.0,2.0.0)"
+Require-Bundle: org.eclipse.e4.ui.model.workbench;bundle-version="2.2.200.v20220817-1444"
+Automatic-Module-Name: E4XApp.fragment
+Bundle-RequiredExecutionEnvironment: JavaSE-21

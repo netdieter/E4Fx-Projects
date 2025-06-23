@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?>
+<target includeMode="feature" name="Running Platform">
+	<locations>
+<!--
+		<location path="C:\Users\diete\eclipse\eclipselink-plugins-4.0.4.v20240715-059428cdd2" type="Profile"/>
+-->
+<!--
+
+		<location includeDependencyDepth="none" includeDependencyScopes="compile" includeSource="true" missingManifest="generate" type="Maven">
+			<dependencies>
+				<dependency>
+					<groupId>org.eclipse.persistence</groupId>
+					<artifactId>eclipselink</artifactId>
+					<version>4.0.4</version>
+					<type>jar</type>
+				</dependency>
+			</dependencies>
+		</location>
+		<location includeDependencyDepth="direct" includeSource="true" missingManifest="generate" type="Maven">
+			<dependencies>
+				<dependency>
+					<groupId>com.google.code.gson</groupId>
+					<artifactId>gson</artifactId>
+					<version>2.11.0</version>
+					<type>jar</type>
+				</dependency>
+			</dependencies>
+		</location>
+-->
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
+			<repository location="https://download.eclipse.org/efxclipse/runtime-released/3.9.0/site/"/>
+			<unit id="org.eclipse.fx.runtime.min.feature.feature.group" version="3.9.0.202210162353"/>
+			<unit id="org.eclipse.fx.slf4j.target.feature.feature.group" version="3.9.0.202209211359"/>
+			<unit id="org.eclipse.fx.target.feature.feature.group" version="3.9.0.202210170008"/>
+		</location>
+		<location path="${eclipse_home}" type="Profile"/>
+		<location includeDependencyDepth="infinite" includeDependencyScopes="compile" includeSource="true" missingManifest="generate" type="Maven">
+			<dependencies>
+				<dependency>
+					<groupId>com.opencsv</groupId>
+					<artifactId>opencsv</artifactId>
+					<version>5.10</version>
+					<type>jar</type>
+				</dependency>
+			</dependencies>
+		</location>
+		<location includeDependencyDepth="infinite" includeDependencyScopes="compile" includeSource="true" missingManifest="generate" type="Maven">
+			<dependencies>
+				<dependency>
+					<groupId>ch.qos.logback</groupId>
+					<artifactId>logback-classic</artifactId>
+					<version>1.5.18</version>
+					<type>jar</type>
+				</dependency>
+			</dependencies>
+		</location>
+	</locations>
+	<environment>
+		<arch>x86_64</arch>
+		<os>win32</os>
+		<ws>win32</ws>
+		<nl>de_DE</nl>
+	</environment>
+	<targetJRE path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21"/>
+	<includeBundles>
+		<feature id="org.eclipse.ecf.core.feature"/>
+		<feature id="org.eclipse.ecf.core.ssl.feature"/>
+		<feature id="org.eclipse.ecf.filetransfer.feature"/>
+		<feature id="org.eclipse.ecf.filetransfer.httpclient5.feature"/>
+		<feature id="org.eclipse.ecf.filetransfer.ssl.feature"/>
+		<feature id="org.eclipse.equinox.executable"/>
+		<feature id="org.eclipse.equinox.p2.core.feature"/>
+		<feature id="org.eclipse.fx.runtime.e4fx.feature"/>
+		<feature id="org.eclipse.fx.runtime.e4fx.p2.feature"/>
+		<feature id="org.eclipse.fx.runtime.min.feature"/>
+		<feature id="org.eclipse.fx.target.ext.feature"/>
+		<feature id="org.eclipse.fx.target.feature"/>
+		<plugin id="com.opencsv"/>
+		<plugin id="wrapped.com.dlsc.pdfviewfx.pdfviewfx"/>
+		<plugin id="wrapped.com.dlsc.pdfviewfx.pdfviewfx.source"/>
+		<plugin id="wrapped.com.dlsc.unitfx.unitfx"/>
+		<plugin id="wrapped.com.dlsc.unitfx.unitfx.source"/>
+		<plugin id="wrapped.javax.inject.javax.inject"/>
+		<plugin id="wrapped.javax.inject.javax.inject.source"/>
+		<plugin id="wrapped.org.kordamp.ikonli.ikonli-core"/>
+		<plugin id="wrapped.org.kordamp.ikonli.ikonli-core.source"/>
+		<plugin id="wrapped.org.kordamp.ikonli.ikonli-javafx"/>
+		<plugin id="wrapped.org.kordamp.ikonli.ikonli-javafx.source"/>
+		<plugin id="wrapped.org.kordamp.ikonli.ikonli-materialdesign-pack"/>
+		<plugin id="wrapped.org.kordamp.ikonli.ikonli-materialdesign-pack.source"/>
+		<plugin id="wrapped.org.openjfx.javafx-base"/>
+		<plugin id="wrapped.org.openjfx.javafx-base.source"/>
+		<plugin id="wrapped.org.openjfx.javafx-controls"/>
+		<plugin id="wrapped.org.openjfx.javafx-controls.source"/>
+		<plugin id="wrapped.org.openjfx.javafx-fxml"/>
+		<plugin id="wrapped.org.openjfx.javafx-fxml.source"/>
+		<plugin id="wrapped.org.openjfx.javafx-graphics"/>
+		<plugin id="wrapped.org.openjfx.javafx-graphics.source"/>
+		<plugin id="wrapped.org.openjfx.javafx-swing"/>
+		<plugin id="wrapped.org.openjfx.javafx-swing.source"/>
+		<plugin id="org.apache.commons.collections"/>
+		<plugin id="org.apache.commons.collections.source"/>
+		<plugin id="org.apache.commons.commons-beanutils"/>
+		<plugin id="org.apache.commons.commons-beanutils.source"/>
+		<plugin id="org.apache.commons.commons-codec"/>
+		<plugin id="org.apache.commons.commons-collections4"/>
+		<plugin id="org.apache.commons.commons-collections4.source"/>
+		<plugin id="org.apache.commons.commons-compress"/>
+		<plugin id="org.apache.commons.commons-io"/>
+		<plugin id="org.apache.commons.commons-logging"/>
+		<plugin id="org.apache.commons.commons-logging.source"/>
+		<plugin id="org.apache.commons.httpclient"/>
+		<plugin id="org.apache.commons.lang3"/>
+		<plugin id="org.apache.commons.lang3.source"/>
+		<plugin id="org.apache.commons.text"/>
+		<plugin id="org.apache.commons.text.source"/>
+	</includeBundles>
+</target>

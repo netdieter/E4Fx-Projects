@@ -1,0 +1,3 @@
+instructions.configure=\
+  addRepository(type:0,location:http${#58}//p2.my.comp/updatesite);\
+  addRepository(type:1,location:http${#58}//p2.my.comp/updatesite);

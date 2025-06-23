@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" prefHeight="649.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.engelhardt.app.controller.BankDatenFormAusgabenController">
+   <children>
+      <VBox layoutX="15.0" layoutY="15.0" prefHeight="683.0" prefWidth="810.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ScrollPane fx:id="scrPane" fitToHeight="true" fitToWidth="true" prefHeight="674.0" prefWidth="800.0">
+               <content>
+                  <TableView fx:id="tabKontoauszug" prefHeight="557.0" prefWidth="798.0">
+                    <columns>
+                      <TableColumn fx:id="colBuchngsdate" editable="false" prefWidth="89.0" text="Buchungstag" />
+                      <TableColumn fx:id="colBetrag" editable="false" prefWidth="61.0" text="Betrag" />
+                        <TableColumn fx:id="colUmsatzart" prefWidth="75.0" text="Umsatzart" />
+                        <TableColumn fx:id="colBuchungstext" maxWidth="6000.0" minWidth="500.0" prefWidth="567.0" text="Buchungstext" />
+                    </columns>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </TableView>
+               </content>
+            </ScrollPane>
+            <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="717.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="85.0" text="Summe:" textAlignment="RIGHT">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtSumme" promptText="Summe">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</AnchorPane>

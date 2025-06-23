@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="E4FXApp.app.feature"
+      label="E4 FX Application Application Feature"
+      version="1.0.0.qualifier"
+      provider-name="${BundleProject_bundleVendor}">
+
+   <description url="http://www.efxclipse.org">
+      TODO FILL WITH CONTENT
+   </description>
+
+   <copyright url="http://www.efxclipse.org">
+      TODO FILL WITH CONTENT
+   </copyright>
+
+   <license url="http://www.efxclipse.org">
+      TODO FILL WITH CONTENT
+   </license>
+
+   <plugin
+         id="E4FXApp.app"
+         version="0.0.0"/>
+
+   <plugin
+         id="org.eclipse.fx.osgi"
+         version="0.0.0"/>
+
+   <plugin
+         id="slf4j-logging-plugin"
+         version="0.0.0"/>
+
+</feature>
