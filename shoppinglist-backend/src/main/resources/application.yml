@@ -1,0 +1,24 @@
+quarkus:
+  application-name: shoppinglist-backend
+  
+  http:
+    port: 8080
+    cors:
+      origins: "*"
+  
+  datasource:
+    db-kind: postgresql
+    username: ${DB_USERNAME:shoppinglist}
+    password: ${DB_PASSWORD:shoppinglist123}
+    jdbc:
+      url: ${DB_URL:jdbc:postgresql://localhost:5432/shoppinglist}
+  
+  hibernate-orm:
+    database:
+      generation: update
+
+# API-Key für die Authentifizierung
+# In Produktion sollte dieser Wert über Umgebungsvariablen gesetzt werden
+shoppinglist:
+  api:
+    key: ${SHOPPINGLIST_API_KEY:dev-api-key-12345}
