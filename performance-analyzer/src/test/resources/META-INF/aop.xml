@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aspectj>
+    <aspects>
+        <aspect name="com.performance.analyzer.aspect.PerformanceMeasurementAspect"/>
+        <weaver options="-verbose -showWeaveInfo">
+            <include within="com.performance.analyzer..*"/>
+        </weaver>
+    </aspects>
+</aspectj>
