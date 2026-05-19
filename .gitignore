@@ -1,46 +1,36 @@
-# Compiled and build artifacts
-*.class
-*.o
-*.obj
-*.exe
-*.dll
-*.so
-*.a
-*.out
-build/
-**/build/
-
-# Dependencies
+```
+# Java/Maven specific
 target/
-.gradle/
-**/.gradle/
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar
+*.tar.gz
+
+# IDE specific
 .idea/
-local.properties
-**/local.properties
-*.log
-*.tmp
-*.swp
-
-# Environment
-.env
-.env.local
-*.env.*
-
-# Editors
+*.iml
+*.ipr
+*.iws
 .vscode/
+
+# Build system
+.mvn/
+mvn/
+gradle/
+.gradle/
+
+# Logs
+*.log
 
 # OS generated files
 .DS_Store
 Thumbs.db
 
-# Coverage reports
-coverage/
-htmlcov/
-.coverage
-
-# Python specific
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
+# Temporary files
+*.tmp
+*.temp
+*~
+```
