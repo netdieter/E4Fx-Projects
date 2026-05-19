@@ -23,15 +23,11 @@
 	</properties>
 
 	<modules>
-		<module>./E4FXApp.app</module>
-		<module>./E4FXApp.app.feature</module>
-		<module>./E4FXApp.app.product</module>
-		<!--		
-		<module>../E4FXApp.fragment</module>
--->
-		
-		<module>./slf4j-logging-plugin</module>
+		<module>slf4j-logging-plugin</module>
 		<module>E4FXApp.libs</module>
+		<module>E4FXApp.app</module>
+		<module>E4FXApp.app.feature</module>
+		<module>E4FXApp.app.product</module>
 	</modules>
 
 	<repositories>
@@ -90,12 +86,17 @@
 					<configuration>
 						<pomDependencies>consider</pomDependencies>
 						<target>
-							<file>../E4FXApp.app.releng/common.target</file>
+							<file>${maven.multiModuleProjectDirectory}/common.target</file>
 						</target>
 						<environments>
 							<environment>
 								<os>win32</os>
 								<ws>win32</ws>
+								<arch>x86_64</arch>
+							</environment>
+							<environment>
+								<os>linux</os>
+								<ws>gtk</ws>
 								<arch>x86_64</arch>
 							</environment>
 						</environments>

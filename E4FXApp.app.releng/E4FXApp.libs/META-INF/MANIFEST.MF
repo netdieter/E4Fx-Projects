@@ -41,9 +41,13 @@ Bundle-RequiredExecutionEnvironment: JavaSE-21
 Automatic-Module-Name: E4FXApp.libs
 Bundle-ClassPath: libs/javafx-base-21.0.7.jar,
  libs/javafx-base-21.0.7-win.jar,
+ libs/javafx-base-21.0.7-linux.jar,
  libs/javafx-controls-21.0.7.jar,
  libs/javafx-controls-21.0.7-win.jar,
+ libs/javafx-controls-21.0.7-linux.jar,
  libs/javafx-fxml-21.0.7.jar,
  libs/javafx-fxml-21.0.7-win.jar,
+ libs/javafx-fxml-21.0.7-linux.jar,
  libs/javafx-graphics-21.0.7.jar,
- libs/javafx-graphics-21.0.7-win.jar
+ libs/javafx-graphics-21.0.7-win.jar,
+ libs/javafx-graphics-21.0.7-linux.jar
