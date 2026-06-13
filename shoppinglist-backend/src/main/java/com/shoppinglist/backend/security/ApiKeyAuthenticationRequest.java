@@ -13,4 +13,19 @@ public class ApiKeyAuthenticationRequest implements AuthenticationRequest {
     public String getApiKey() {
         return apiKey;
     }
+
+    @Override
+    public java.util.Map<String, Object> getAttributes() {
+        return java.util.Collections.emptyMap();
+    }
+
+    @Override
+    public void setAttribute(String name, Object value) {
+        // do nothing
+    }
+
+    @Override
+    public <T> T getAttribute(String name) {
+        return null;
+    }
 }
