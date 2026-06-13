@@ -21,30 +21,28 @@ public class ApiKeyIdentityProvider implements IdentityProvider<ApiKeyAuthentica
 
     @Override
     public Uni<SecurityIdentity> authenticate(ApiKeyAuthenticationRequest request, AuthenticationRequestContext context) {
-        return context.runOnIoThread(() -> {
-            String providedApiKey = request.getApiKey();
-            
-            if (providedApiKey == null || providedApiKey.isEmpty()) {
-                throw new SecurityException("API-Key fehlt");
-            }
-            
-            // Wenn kein API-Key konfiguriert ist, erlauben wir alle Requests (für Entwicklung)
-            if (configuredApiKey == null || configuredApiKey.isEmpty()) {
-                return createSecurityIdentity(providedApiKey);
-            }
-            
-            if (!configuredApiKey.equals(providedApiKey)) {
-                throw new SecurityException("Ungültiger API-Key");
-            }
-            
-            return createSecurityIdentity(providedApiKey);
-        });
+        String providedApiKey = request.getApiKey();
+
+        if (providedApiKey == null || providedApiKey.isEmpty()) {
+            return Uni.createFrom().failure(new SecurityException("API-Key fehlt"));
+        }
+
+        // Wenn kein API-Key konfiguriert ist, erlauben wir alle Requests (für Entwicklung)
+        if (configuredApiKey == null || configuredApiKey.isEmpty()) {
+            return Uni.createFrom().item(createSecurityIdentity(providedApiKey));
+        }
+
+        if (!configuredApiKey.equals(providedApiKey)) {
+            return Uni.createFrom().failure(new SecurityException("Ungültiger API-Key"));
+        }
+
+        return Uni.createFrom().item(createSecurityIdentity(providedApiKey));
     }
 
     private SecurityIdentity createSecurityIdentity(String apiKey) {
-        SecurityIdentity identity = SecurityIdentity.builder()
+        return new io.quarkus.security.runtime.QuarkusSecurityIdentity.Builder()
+                .setPrincipal(new io.quarkus.security.runtime.QuarkusPrincipal("api-user"))
                 .addAttribute("api-key", apiKey)
                 .build();
-        return identity;
     }
 }
